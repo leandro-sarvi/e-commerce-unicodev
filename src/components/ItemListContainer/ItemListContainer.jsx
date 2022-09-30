@@ -10,7 +10,7 @@ function ItemListContainer({ greeting }) {
     <>
     <h1>{greeting}</h1>
     <section className={styles.container}>
-      <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+      <ItemCount initial={1} stock={15} onAdd={onAdd}/>
       <Item />
       <Item />
       <Item />
