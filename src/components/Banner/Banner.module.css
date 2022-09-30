@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+    .video{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+    }
+  }

@@ -1,0 +1,41 @@
+.countContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+}
+.btnAdd{
+    border: solid 1.5px #00b3d4;
+    color:#ccc;
+    height: inherit;
+    padding: .5rem .5rem .5rem .2rem;
+    border-radius: .5rem;
+    border-top-right-radius: 2rem;
+    transition: box-shadow .5s ease-out;
+}
+.btnRemove{
+    border: solid 1.5px #00b3d4;
+    color:#ccc;
+    height: inherit;
+    padding: .5rem .2rem .5rem .5rem;
+    border-radius: .5rem;
+    border-top-left-radius: 2rem;
+    transition: box-shadow .5s ease-out;
+}
+.btnCart{
+    width: 100%;
+    border: solid 1.5px #00b3d4;
+    color:#ccc;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin: 1rem 0;
+    transition: box-shadow .8s ease-out;
+}
+.btnRemove:hover, .btnAdd:hover, .btnCart:hover{
+    box-shadow: 1px 1px 30px 0px #00b3d4;
+    -webkit-box-shadow: 1px 1px 30px 0px #00b3d4;
+    -moz-box-shadow: 1px 1px 30px 0px #00b3d4;
+    transition: box-shadow .5s ease-out;
+}
