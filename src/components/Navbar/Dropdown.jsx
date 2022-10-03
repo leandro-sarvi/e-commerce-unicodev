@@ -7,7 +7,7 @@ function Dropdown({open}) {
         { id: 3, categoria: "Accesorios" },
       ];
       return (
-        <div className={open?styles.open:styles.hidden}>
+        <div className={open?styles.open:styles.disguise}>
         <nav className={styles.dropdown}>
           <ul>
             {categorias.map((cat) => {
