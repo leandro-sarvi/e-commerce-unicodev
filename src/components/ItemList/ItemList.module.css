@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .container{
+    position: relative;
     background-color: transparent;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );

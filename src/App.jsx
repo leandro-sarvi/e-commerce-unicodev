@@ -6,6 +6,7 @@ import "./App.css";
 import Dropdown from "./components/Navbar/Dropdown";
 
 function App() {
+  const greeting ="Las mejores ofertas";
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);
@@ -15,7 +16,7 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown open={open} />
       <Banner />
-      <ItemListContainer />
+      <ItemListContainer greeting={greeting}/>
     </>
   );
 }

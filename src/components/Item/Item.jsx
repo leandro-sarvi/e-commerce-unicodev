@@ -1,7 +1,7 @@
 import React from "react";
 import celular from "../../assets/sansung-galaxy-22.png";
 import style from "../Item/Item.module.css";
-function Item() {
+function Item({prod}) {
   return (
     <div className={style.card}>
       <div className={style.cuotas}>
@@ -11,11 +11,11 @@ function Item() {
           <span>s / interés</span>
         </div>
       </div>
-      <img src={celular} alt='item-product'></img>
+      <img src={prod.image} alt='item-product'></img>
       <div className={style.info}>
-        <h3 className={style.h3}>SANSUNG</h3>
-        <p>SAMSUNG GALAXY S22 BLANCO 8/128GB 6.1”</p>
-        <p className={style.price}>$215.000</p>
+        <h3 className={style.h3}>{prod.category}</h3>
+        <p>{prod.title}</p>
+        <p className={style.price}>${prod.price}</p>
       </div>
       <button className={style.Button}>Ver más</button>
     </div>
