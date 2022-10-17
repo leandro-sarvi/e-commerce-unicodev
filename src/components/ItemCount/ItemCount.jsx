@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 import styles from "../ItemCount/ItemCount.module.css";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
@@ -20,12 +21,12 @@ function ItemCount({ initial, stock, onAdd }) {
     }
   };
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.countContainer}>
         <button onClick={handleSubtract} className={styles.btnRemove}>
           <RemoveIcon />
         </button>
-        <h1 className={styles.label}>{count}</h1>
+        <em className={styles.label}>{count}</em>
         <button onClick={handleAdd} className={styles.btnAdd}>
           <AddIcon />
         </button>
@@ -36,8 +37,9 @@ function ItemCount({ initial, stock, onAdd }) {
           addToCart(count);
         }}
       >
-       <ShoppingCartIcon /> Añadir 
+       <ShoppingCartIcon sx={{ fontSize: 15 }} /> Añadir 
       </button>
+      <Link to="/"><button className={styles.btnCart}>Seguir comprando</button></Link>
     </div>
   );
 }

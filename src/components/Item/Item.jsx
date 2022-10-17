@@ -1,7 +1,8 @@
 import React from "react";
-import celular from "../../assets/sansung-galaxy-22.png";
 import style from "../Item/Item.module.css";
-function Item({prod}) {
+import { Link } from "react-router-dom";
+function Item({ prod }) {
+  const URL_ITEM=`/products/${prod.id}`
   return (
     <div className={style.card}>
       <div className={style.cuotas}>
@@ -11,13 +12,13 @@ function Item({prod}) {
           <span>s / interés</span>
         </div>
       </div>
-      <img src={prod.image} alt='item-product'></img>
+      <img src={prod.image} alt="item-product"></img>
       <div className={style.info}>
         <h3 className={style.h3}>{prod.category}</h3>
         <p>{prod.title}</p>
-        <p className={style.price}>${prod.price}</p>
+        <em className={style.price}>${prod.price}</em>
       </div>
-      <button className={style.Button}>Ver más</button>
+      <Link to={URL_ITEM}><button className={style.Button}>Ver más</button></Link>
     </div>
   );
 }

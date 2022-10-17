@@ -1,7 +1,8 @@
+.container{
+    width: 100%;
+}
 .countContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @apply flex items-center justify-between;
     width: 50%;
     height: 40px;
     margin: 0 auto;
@@ -25,11 +26,10 @@
     transition: box-shadow .5s ease-out;
 }
 .btnCart{
+    @apply rounded-lg p-2;
     width: 100%;
     border: solid 1.5px #00b3d4;
     color:#ccc;
-    border-radius: .5rem;
-    padding: .5rem;
     margin: 1rem 0;
     transition: box-shadow .8s ease-out;
 }

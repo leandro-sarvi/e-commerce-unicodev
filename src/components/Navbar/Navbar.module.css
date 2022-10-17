@@ -28,10 +28,8 @@
 }
 .Nav > ul > li{
     margin-right: .5rem;
-    height: 100%;
 }
 .Nav > ul > li > a{
-    height: inherit;
     border-radius: 0;
     color: #ccc;
     text-transform: none;
@@ -53,10 +51,7 @@
     background-color: #1c1c1c;
     z-index: 100;
     color: #ccc;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    text-align: left;
+    @apply flex flex-col items-start text-left;
 }
 .dropdown li{
     padding: 1rem;

@@ -1,16 +1,25 @@
-import React from 'react'
-import styles from '../ItemList/ItemList.module.css'
+import React from "react";
+import styles from "../ItemList/ItemList.module.css";
 import Item from "../Item/Item";
-import ItemCount from "../ItemCount/ItemCount";
-function ItemList({onAdd, products}) {
+import Loading from "../Loading/Loading";
+import Banner from "../Banner/Banner";
+import { MdDoubleArrow } from 'react-icons/md';
+function ItemList({ products, greeting }) {
   return (
+    
+    <>
+    <Banner />
+    <h1 className={styles.title}><MdDoubleArrow/>{greeting}</h1>
     <section className={styles.container}>
-<ItemCount initial={1} stock={15} onAdd={onAdd}/>
-      {products.map((prod)=>{
-       return  <Item key={prod.id} prod={prod}/>
-      })}
-    </section>
-  )
+      {products.length > 0 ? (
+        products.map((prod) => {
+          return <Item key={prod.id} prod={prod} />;
+        })
+      ) : (
+        <Loading />
+      )}
+    </section></>
+  );
 }
 
-export default ItemList
+export default ItemList;

@@ -2,19 +2,22 @@ import styles from "./Navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CartWidget from "./CartWidget";
 import Nav from "./Nav";
-function Navbar({toggle}) {
+import { Link } from "react-router-dom";
+function Navbar({ toggle }) {
   return (
     <header className={styles.header}>
       <div className={styles.burgerMenu} onClick={toggle}>
         <MenuIcon />
       </div>
       <div className={styles.mainTitle}>
-        <a href="#" >
+        <Link to="/">
           unico<span className={styles.cg}>dev</span>
-        </a>
+        </Link>
       </div>
       <Nav styles={styles} />
-      <CartWidget />
+      <Link to="/cart">
+        <CartWidget />
+      </Link>
     </header>
   );
 }

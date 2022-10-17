@@ -7,7 +7,7 @@ function CartWidget() {
   return (
     <>
     <IconButton>
-        <Badge badgeContent={4} color="primary">
+        <Badge badgeContent={0} color="primary">
         <ShoppingCartIcon className={style.CartWidget}/>
         </Badge>
         </IconButton>

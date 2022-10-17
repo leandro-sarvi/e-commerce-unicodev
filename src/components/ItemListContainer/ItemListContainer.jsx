@@ -1,26 +1,33 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import Loading from "../Loading/Loading";
-function ItemListContainer({ greeting }) {
+function ItemListContainer() {
   const [loading, setloading] = useState(true);
   const [products, setproducts] = useState([]);
-  const onAdd = (count) => {
-    console.log(`El usuario quiere agregar ${count} productos`);
-  };
+  const { idCategory } = useParams();
+  const URL_BASE = "https://fakestoreapi.com/products";
+  const URL_CATEGORY = `${URL_BASE}/category/${idCategory}`;
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    setloading(true);
+    fetch(`${idCategory ? URL_CATEGORY : URL_BASE}`)
       .then((res) => res.json())
       .then((json) => setproducts(json))
       .catch((err) => console.log(err))
       .finally(() => setloading(false));
-  }, []);
+  }, [idCategory]);
 
   return (
     <>
-      <h1>{greeting}</h1>
-
-      {loading ? <Loading /> : <ItemList onAdd={onAdd} products={products} />}
+      {loading ? (
+        <Loading />
+      ) : (
+        <ItemList
+          products={products}
+          greeting={idCategory ? idCategory : "Las mejores ofertas"}
+        />
+      )}
     </>
   );
 }

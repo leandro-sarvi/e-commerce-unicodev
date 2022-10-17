@@ -11,3 +11,6 @@
     max-width: 998px;
     margin: 0 auto;
 }
+.title{
+    @apply m-4 uppercase flex 
+}
