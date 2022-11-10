@@ -88,7 +88,7 @@ function Checkout() {
             <hr className={styles.myBox}></hr>
           </header>
           <div className={styles.checkoutContainer}>
-            {cart.lenght>0?(<form onSubmit={handleSubmit(onSubmit)} className={styles.formC}>
+            {cart.length>0?(<form onSubmit={handleSubmit(onSubmit)} className={styles.formC}>
               <div className={styles.containerInput}>
                 <label>Nombre:</label>
                 <input
