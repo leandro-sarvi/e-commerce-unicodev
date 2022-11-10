@@ -1,0 +1,1 @@
+{ "rewrites": [ { "source": "/", "destination": "/category/celulares" }, { "source": "/(.*)", "destination": "/"}, { "source": "/create", "destination": "/create" }, { "source": "/live", "destination": "livel" }, { "source": "/dashboard", "destination": "/dashboard" }, { "source": "/profile", "destination": "/profile" }] }
