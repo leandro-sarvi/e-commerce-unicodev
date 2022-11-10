@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import {Link, NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 function Nav({ styles }) {
   const categorias = [
-    { id: 1, categoria: "electronics", ruta: "/category/electronics" },
-    { id: 2, categoria: "jewelery", ruta: "/category/jewelery" },
-    { id: 3, categoria: "men's clothing", ruta: "/category/men's clothing" },
+    { id: 1, categoria: "Celulares", ruta: "/category/celulares" },
+    { id: 2, categoria: "Televisores", ruta: "/category/televisores" },
+    { id: 3, categoria: "Informática", ruta: "/category/informatica" },
   ];
   return (
     <nav className={styles.Nav}>
@@ -13,10 +14,14 @@ function Nav({ styles }) {
         {categorias.map((cat) => {
           return (
             <li key={cat.id}>
-             <NavLink  to={cat.ruta} style={({ isActive }) => ({
-    color: isActive ? '#00b3d4' : '#ccc'
-  })}><Button color="inherit">{cat.categoria}</Button></NavLink>
-              
+              <NavLink
+                to={cat.ruta}
+                style={({ isActive }) => ({
+                  color: isActive ? "#00b3d4" : "#ccc",
+                })}
+              >
+                <Button color="inherit"><KeyboardDoubleArrowRightIcon fontSize="medium"/>{cat.categoria}</Button>
+              </NavLink>
             </li>
           );
         })}

@@ -1,41 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .container{
     width: 100%;
 }
 .countContainer{
-    @apply flex items-center justify-between;
-    width: 50%;
+    @apply flex flex-col items-center justify-between mt-4 md:flex-row;
     height: 40px;
-    margin: 0 auto;
+}
+.flexCount{
+    @apply flex items-center justify-between mb-2 md:mb-0 md:mr-4;
+}
+.flexCount em{
+    margin: 0 1rem;
+    filter: drop-shadow(0 0 0.75rem hsl(270, 73%, 53%));
 }
 .btnAdd{
-    border: solid 1.5px #00b3d4;
+    border: 2px solid transparent;
+border-image: linear-gradient(
+to right bottom,
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(89, 1, 252, 0)
+);
+border-image-slice: 1;
     color:#ccc;
-    height: inherit;
-    padding: .5rem .5rem .5rem .2rem;
+    padding: .5rem;
     border-radius: .5rem;
-    border-top-right-radius: 2rem;
     transition: box-shadow .5s ease-out;
 }
 .btnRemove{
-    border: solid 1.5px #00b3d4;
+    border: 2px solid transparent;
+border-image: linear-gradient(
+to right bottom,
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(89, 1, 252, 0)
+);
+border-image-slice: 1;
     color:#ccc;
-    height: inherit;
-    padding: .5rem .2rem .5rem .5rem;
+    padding: .5rem ;
     border-radius: .5rem;
-    border-top-left-radius: 2rem;
     transition: box-shadow .5s ease-out;
 }
 .btnCart{
     @apply rounded-lg p-2;
     width: 100%;
-    border: solid 1.5px #00b3d4;
+    height: inherit;
+    border: 2px solid transparent;
+border-image: linear-gradient(
+to right bottom,
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(89, 1, 252, 0)
+);
+border-image-slice: 1;
     color:#ccc;
-    margin: 1rem 0;
     transition: box-shadow .8s ease-out;
 }
 .btnRemove:hover, .btnAdd:hover, .btnCart:hover{
-    box-shadow: 1px 1px 30px 0px #00b3d4;
-    -webkit-box-shadow: 1px 1px 30px 0px #00b3d4;
-    -moz-box-shadow: 1px 1px 30px 0px #00b3d4;
+    box-shadow: 1px 1px 30px 0px hsl(270, 73%, 53%);
+    -webkit-box-shadow: 1px 1px 30px 0px hsl(270, 73%, 53%);
+    -moz-box-shadow: 1px 1px 30px 0px hsl(270, 73%, 53%);
     transition: box-shadow .5s ease-out;
 }

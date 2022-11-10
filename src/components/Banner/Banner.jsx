@@ -1,6 +1,5 @@
 import React from "react";
 import video from "../../assets/video-banner.mp4";
-import poster from "../../assets/poster.png";
 import styles from "../Banner/Banner.module.css";
 function Banner() {
   return (

@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.checkoutContainer{
+@apply flex flex-col justify-center items-center
+}
+.header{
+    @apply text-center flex flex-col items-center justify-center
+}
+.header h1{
+    @apply p-2
+}
+.myBox{
+    border-bottom: 2px solid transparent;
+border-image: linear-gradient(
+0.25turn,
+rgba(56, 2, 155, 0),
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(56, 2, 155, 0)
+);
+border-image-slice: 1;
+width: 100%;
+margin-bottom: 1rem;
+}
+.formC {
+    @apply block w-full max-w-md;
+    padding: 1.5rem;
+  }
+  .containerInput{
+  margin-bottom: 1.5rem;
+  }
+  .containerInput p{
+    padding: .2rem 0;
+    }
+  .containerInput input[type="text"],
+.containerInput input[type="email"],
+.containerInput input[type="number"] {
+    display: block;
+    width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border:none;
+  border-bottom: 2px solid transparent;
+border-image: linear-gradient(
+0.25turn,
+rgba(56, 2, 155, 0),
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(56, 2, 155, 0)
+);
+border-image-slice: 1;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background: #1c1c1c;
+  margin-top: .2rem;
+}
+.containerInput input[type="text"]:focus,
+.containerInput input[type="email"]:focus {
+  color: #fff;
+}
+.coolBtn{
+  display: block;
+  width: 100%;
+    text-align: center;
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+    to right bottom,
+    hsl(162, 100%, 58%),
+    hsl(270, 73%, 53%),
+    rgba(89, 1, 252, 0)
+    );
+    border-image-slice: 1;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    }
+    .cg {
+      background: -webkit-linear-gradient(hsl(162, 100%, 58%), hsl(270, 73%, 53%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .endCheckout{
+    @apply flex flex-col items-center justify-center h-96 p-4;
+  }
+  .endCheckout h1,
+  .endCheckout p{
+    @apply mb-4
+  }

@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 .header{
-    @apply flex justify-between items-center h-16 w-full bg-transparent  pl-4 pr-4 shadow-sm backdrop-blur-md
+    @apply flex justify-between items-center h-16 w-full bg-transparent  pl-4 pr-4 shadow-sm;
 }
 .header{
     z-index: 1000;
 }
 .burgerMenu{
-    @apply px-4 cursor-pointer md:hidden
-}
-.burgerMenu{
+    @apply flex items-center cursor-pointer md:hidden;
     color: #ccc;
+}
+.burgerMenu p{
+    margin: 0;
 }
 .mainTitle{
     @apply flex  items-center text-2xl 
@@ -25,9 +26,6 @@
 }
 .Nav > ul{
     @apply hidden   h-full  text-white relative   md:flex items-center
-}
-.Nav > ul > li{
-    margin-right: .5rem;
 }
 .Nav > ul > li > a{
     border-radius: 0;
@@ -45,33 +43,23 @@
 .CartWidget{
     color: #ccc;
 }
-.dropdown{
-    position: absolute;
-    width: 100%;
-    background-color: #1c1c1c;
-    z-index: 100;
-    color: #ccc;
-    @apply flex flex-col items-start text-left;
+.info{
+    @apply p-2;
+    background: linear-gradient(135deg, #00aebb 0%, #52006d 100%);
 }
-.dropdown li{
-    padding: 1rem;
+.myBox{
+    border-bottom: 2px solid transparent;
+border-image: linear-gradient(
+0.25turn,
+rgba(56, 2, 155, 0),
+hsl(162, 100%, 58%),
+hsl(270, 73%, 53%),
+rgba(56, 2, 155, 0)
+);
+border-image-slice: 1;
+width: 100%;
+margin-bottom: 1rem;
 }
-.open{
-    position: absolute;
-    width: 100%;
-    top: 4rem;
-    left: 0;
-    transition: left .3s ease-out;
+.liLinks{
+    @apply flex items-center justify-evenly
 }
-.disguise{
-    position: absolute;
-    width: 100%;
-    top: 4rem;
-    left:-100%;
-    transition: left .3s ease-out;
-}
-@media (min-width: 768px) {
-    .header{
-        @apply fixed
-    }
-  }

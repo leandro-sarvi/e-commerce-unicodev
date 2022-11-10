@@ -10,6 +10,7 @@ function ItemList({ products, greeting }) {
     <>
     <Banner />
     <h1 className={styles.title}><MdDoubleArrow/>{greeting}</h1>
+    <hr className={styles.myBox}></hr>
     <section className={styles.container}>
       {products.length > 0 ? (
         products.map((prod) => {

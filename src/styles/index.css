@@ -6,9 +6,6 @@ body{
   color: #ffffff;
   height: 100vh;
  background-color: #1c1c1c;
-  object-fit: cover;
-  object-position: center center;
-  overflow: overlay;
 }
 ::-webkit-scrollbar {
   width: 4px;
