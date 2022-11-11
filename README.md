@@ -1,11 +1,11 @@
 # Shop Unicodev
-## _Tienda_de_electronica
+## _Tienda de electronica_
 
 [︎🔗 VER DEMO](https://shopunicodev.vercel.app/)
 
 
 
->ShopUnicodev es una tienda realiza como proyecto integrador del curso de React, con el fin de poner
+>ShopUnicodev es una tienda realizada como proyecto integrador para el curso de React de CODERHOUSE, con el fin de poner
 en practica todo lo aprendido en dicho curso.
 
 
