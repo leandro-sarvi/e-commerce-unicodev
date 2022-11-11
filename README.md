@@ -8,10 +8,13 @@
 >ShopUnicodev es una tienda realizada como proyecto integrador para el curso de React de CODERHOUSE, con el fin de poner
 en practica todo lo aprendido en dicho curso.
 
+¡Este proyecto utiliza variables de entorno, utiliza tus credenciales de firebase!
+
 
 ## Qué puedo hacer:
 
 - Ver el catálogo de productos disponibles.
+- Filtrar por categorías.
 - Ver detalles de cada producto.
 - Agregar productos al carro.
 - Generar una orden de compra.
